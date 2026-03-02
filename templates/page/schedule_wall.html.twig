@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'The scheduling wall'} %}
+        <p>During this unconference, topics will be proposed, given and selected by the attendees. On this page, you can find the live schedule, as it comes to being. We aim to keep this schedule as up-to-date as we can. For this is our creed.
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'You are the program'} %}
+        {% include 'text/header2.html.twig' with {content: 'You have spoken'} %}
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% set startingTimes1 = [] %}
+        {% for room in program['day1-1'] %}
+            {% for time in room.slots|keys %}
+                {% if time not in startingTimes1 %}
+                    {% set startingTimes1 = startingTimes1|merge([time]) %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% include 'components/schedule.html.twig' with {
+            label: 'Thursday morning',
+            program: program['day1-1'],
+            startingTimes: startingTimes1
+        } %}
+
+        {% set startingTimes2 = [] %}
+        {% for room in program['day1-2'] %}
+            {% for time in room.slots|keys %}
+                {% if time not in startingTimes2 %}
+                    {% set startingTimes2 = startingTimes2|merge([time]) %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% include 'components/schedule.html.twig' with {
+            label: 'Thursday afternoon',
+            program: program['day1-2'],
+            startingTimes: startingTimes2
+        } %}
+
+        {% set startingTimes3 = [] %}
+        {% for room in program['day2-1'] %}
+            {% for time in room.slots|keys %}
+                {% if time not in startingTimes3 %}
+                    {% set startingTimes3 = startingTimes3|merge([time]) %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% include 'components/schedule.html.twig' with {
+            label: 'Friday morning',
+            program: program['day2-1'],
+            startingTimes: startingTimes3
+        } %}
+
+        {% set startingTimes4 = [] %}
+        {% for room in program['day2-2'] %}
+            {% for time in room.slots|keys %}
+                {% if time not in startingTimes4 %}
+                    {% set startingTimes4 = startingTimes4|merge([time]) %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% include 'components/schedule.html.twig' with {
+            label: 'Friday afternoon',
+            program: program['day2-2'],
+            startingTimes: startingTimes4
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

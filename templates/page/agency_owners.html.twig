@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Round Table of Agency Owners'} %}
+        <p class="my-4">
+            Even though this unconference is really tech-minded and therefore sweet for Magento developers,
+            there is something for agency owners as well. On the second day (Friday) in the afternoon, there will be a round table discussion organized for and by agency owners: Want to brainstorm with other CTOs and CEOs about non-technical details? This is your chance!
+        </p>
+        <p class="my-4">
+            Note that for attending this parallel session, a MageUnconference ticket is still needed, which gives you food &amp; drinks and includes the after-party plus diner.
+        </p>
+        <p class="my-4">
+            {% include 'components/cta_button.html.twig' with {
+                href: 'https://training.yireo.com/events/mageunconference-nl-2026',
+                text: 'Get your ticket'
+            } %}
+        </p>
+        <div class="mt-8 flex gap-4">
+            <img src="{{ asset('images/team/peterjaap.jpg') }}" alt="Moderated by Peter Jaap Blaakmeer" class="w-32">
+            <strong>Moderated by Peter Jaap Blaakmeer</strong>
+        </div>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'CEOs can be nerdy too'} %}
+        {% include 'text/header2.html.twig' with {content: 'Friday, June 26th 2026 - 11:30 to 17:30'} %}
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Possible topics'} %}
+        <p class="text-left my-4">
+            Just like with any gathering at the unconfererence, the topics will be brought to the table by the participants themselves. Here are some suggestions anyway:
+        </p>
+        <ul class="striped text-left my-4">
+            <li>How to track hours? What kind of tools are used by everyone?</li>
+            <li>Tips for dealing with remote workers</li>
+            <li>Tools for invoicing and hunting down unpaid invoices</li>
+            <li>Increasing developer happiness</li>
+            <li>How to get a 50-person foosball into your office</li>
+            <li>How to get rid of annoying clients</li>
+            <li>Interesting books to read</li>
+            <li>The ideal project flow</li>
+        </ul>
+        <p class="text-left my-4">Plenty of things to talk about</p>
+        <p>
+            {% include 'components/cta_button.html.twig' with {
+                href: 'https://training.yireo.com/events/mageunconference-nl-2026',
+                text: 'Get your ticket'
+            } %}
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+{% endblock %}

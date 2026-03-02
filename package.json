@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "fonts": "postcss assets/styles/fonts.scss -o assets/styles/fonts.css",
+        "build": "postcss assets/styles/app.scss -o assets/styles/app.css",
+        "watch": "postcss assets/styles/app.scss -o assets/styles/app.css --watch"
+    },
+    "dependencies": {
+        "@csstools/postcss-sass": "^5.1.1",
+        "@tailwindcss/postcss": "^4.2.1",
+        "@tailwindcss/typography": "^0.5.19",
+        "autoprefixer": "^10.4.27",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "postcss-scss": "^4.0.9",
+        "tailwindcss": "^4.2.1"
+    }
+}

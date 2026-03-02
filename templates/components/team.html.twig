@@ -1,0 +1,50 @@
+{% set members = [
+    {
+        name: 'Jisse Reitsma',
+        image: 'jisse',
+    },
+    {
+        name: 'Ruben Creemers',
+        image: 'ruben',
+    },
+    {
+        name: 'Ruud van Zuidam',
+        image: 'ruud',
+    },
+    {
+        name: 'Ruud van Zuidam',
+        image: 'sean',
+    },
+    {
+        name: 'Michiel Gerritsen',
+        image: 'michiel',
+    },
+    {
+        name: 'Jeroen Boermsa',
+        image: 'jeroen',
+    },
+    {
+        name: 'Henk Valk',
+        image: 'henk',
+    },
+]
+%}
+
+<div class="flex justify-center items-center leading-6 text-black">
+    <section class="my-8 md:my-32 mx-4 md:mx-8">
+        {% include 'text/header2.html.twig' with {content: 'Le unconf team'} %}
+        {% include 'text/header3.html.twig' with {content: 'real freedom fighters'} %}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12">
+            {% for member in members %}
+            <div>
+                <picture>
+                    <source srcset="{{ asset('images/team/' ~ member.image ~ '.avif') }}" type="image/avif">
+                    <source srcset="{{ asset('images/team/' ~ member.image ~ '.webp') }}" type="image/webp">
+                    <img src="{{ asset('images/team/' ~ member.image) }}.png" alt="{{ member.name }}" class="" loading="lazy">
+                    <strong>{{ member.name }}</strong>
+                </picture>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

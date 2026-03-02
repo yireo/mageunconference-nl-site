@@ -1,0 +1,23 @@
+<div class="mb-16">
+<h3 class="logo text-2xl uppercase mb-8">{{ label }}</h3>
+<table class="striped" width="100%">
+    <thead>
+        <tr>
+            <th width="16%" class="text-left">Room</th>
+            {% for time in startingTimes %}
+                <th width="28%" class="text-left">{{ time }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for room in program %}
+            <tr>
+                <td class="font-bold">{{ room.room }}</td>
+                {% for time in startingTimes %}
+                    <td class="text-sm">{{ room.slots[time] is defined ? room.slots[time] : '-' }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>

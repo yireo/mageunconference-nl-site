@@ -1,0 +1,11 @@
+{% set cssClass = '' %}
+
+{% if align|default('') == 'center' %}
+    {% set cssClass = 'text-center' %}
+{% endif %}
+
+<div class="flex justify-center items-center text-black">
+    <section class="w-full md:w-6xl my-4 md:my-32 px-4 md:px-8 {{ cssClass }}">
+         {{ content }}
+    </section>
+</div>

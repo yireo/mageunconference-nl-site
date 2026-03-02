@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Fort aan de Klop'} %}
+        {% include 'text/header2.html.twig' with {content: 'Utrecht, Netherlands'} %}
+
+        <p>MageUnconference will take place in the historic fortress <strong>Fort aan de Klop</strong> in the middle of the city of Utrecht, The Netherlands. The fortress was built in the 19th century, being part of the Nieuwe Hollandse Waterlinie (new Dutch waterline of defence). Nowadays, it is a place where families come to chill, meetings are held and developers get drunk.
+        </p>
+        <p>
+            {% include 'components/cta_button.html.twig' with {
+                href: path('app_visiting'),
+                text: 'Visiting Utrecht and Amsterdam'
+            } %}
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+{% include 'components/banner_image.html.twig' with {
+    image: 'mando-cycling-site.png',
+    label: 'Cycle like a Mandolorian does'
+} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'Getting to the venue'} %}
+
+        {% include 'text/header3.html.twig' with {tag: 'h3', content: 'By car'} %}
+        <p class="my-4">If you are coming by car, make sure to drive to a nearby parking parking lot. The official parking lot at the corner of Vechtdijk and Franciscusdreef (west of the fortress) is a good option, but make sure to NOT park here at night - it is not safe - lions and tigers and bears. Instead, if you want to park your car as well in the evening and at night, use the parking areas of San Cristobaldreef (north) or Costa Ricadreef (east). It is all free parking.
+        </p>
+
+        {% include 'text/header3.html.twig' with {tag: 'h3', content: 'By public transport'} %}
+        <p class="my-4">
+            Utrecht Central Station is easily reachable by train. From there, you should be able to take bus 3 towards the Franciscusdreef. From there, it is a short stroll towards the fortress.
+        </p>
+
+        {% include 'text/header3.html.twig' with {tag: 'h3', content: 'By foot'} %}
+        <p class="my-4">
+            Utrecht Sentral Station (and with that, the entire city center) is 4 kilometers away from the venue. If you like hiking, walking from and to the venue could be your thing too.
+        </p>
+
+        {% include 'text/header3.html.twig' with {tag: 'h3', content: 'By bicycle'} %}
+        <p class="my-4">
+            You could also opt for the Dutch thing: Riding a bike. There are quite a few options out there: At <a href="https://www.laagcatharijne.nl/fiets-huren/stadsfiets-huren">laagcatharijne.nl</a> (Dutch only) you can rent very good bicycles for about 8,50 Euro per day. With OV Fiets, things become even cheaper (4,65 Euro) but you will need to get a (free) subscription first and a public transport pass, before you can take a bicycle with you. Note that in Utrecht Zuilen (the closest train station) there are little bicycles available. The option to cycle to the venue, is therefore best if you stay in the city center.
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+{% include 'components/banner_image.html.twig' with {
+    image: 'venue1-red.jpg',
+    label: 'Fort aan de Klop'
+} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'The conference rooms'} %}
+        <p class="my-4">The conference will be held mainly in rooms Alderaan (A), Dagobah 1 and 2 (D1 and D2) and Endor (E). On Thursday, we also have Ferrix (F) available.</p>
+
+        <ul class="my-4">
+            <li><strong>Alderaan (A)</strong> - Main hall</li>
+            <li><strong>Bespin (B)</strong> - Bastion building (restaurant)</li>
+            <li><strong>Dagobah 1 (D1)</strong> - Small living room</li>
+            <li><strong>Dagobah 2 (D2)</strong> - Small living room</li>
+            <li><strong>Endor (E)</strong> - Large living room</li>
+            <li><strong>Ghorman (G)</strong> - Large meeting room</li>
+            <li><strong>Hoth (H)</strong> - Agency Owner Roundup Table (Romney)</li>
+            <li><strong>Outer Rim (O)</strong> - Camping ground</li>
+        </ul>
+
+        <div id="map">
+            <img src="{{ asset('images/plattegrond.png') }}" style="width: 100%; height: auto;" alt="Venue map">
+        </div>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+{% include 'components/banner_image.html.twig' with {
+    image: 'alderaan-red.jpg',
+    label: 'Main conference hall'
+} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'Rooms and dorms at the venue'} %}
+        <p class="my-4">There are 32 inside beds available at the venue (of which 6 are already occupied at the time of writing, so there&apos;s 26 beds left). Accommodation is only included in the ticket price if mentioned explicitly so (for instance, with the &quot;Full Attendance&quot; ticket). Beds will be assigned to people somewhere in the weeks beforehand. The following is a draft:</p>
+        <ul class="my-4">
+            <li><strong>Room D1</strong>: 4 beds (reserved for the Yireo team)</li>
+            <li><strong>Room D2</strong>: 4 beds (reserved for female attendees)</li>
+            <li><strong>Dorm E1</strong>: 8 beds (others)</li>
+            <li><strong>Dorm E2</strong>: 4 beds (others)</li>
+            <li><strong>Room F1</strong>: 4 beds (others)</li>
+            <li><strong>Room F2</strong>: 4 beds (others)</li>
+            <li><strong>Room F3</strong>: 4 beds (others)</li>
+        </ul>
+
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'Camping ground at the venue'} %}
+        <p class="my-4">
+            New to the unconference is the option to camp inside the venue (on the wall known as Outer Rim). There are 25 camping spots available, with a variable number of sleeping spots per camping spots (depending on the size of the tent). Campervans and caravans are not allowed on the venue. If you would like to stay with your tent or you want to hire a tent via us, let us know so we can make arrangements. Staying at the camping ground is only allowed if a ticket for this has been purchased.
+        </p>
+
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'Staying in other places'} %}
+        <p class="my-4">
+            Besides the accommodation options at the venue, there are other accommodations available in the city of Utrecht. Note however that the venue is located in the Utrecht neighbourhood of Zuilen, which offers slightly less options. Check Booking.com and AirBnb early.
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

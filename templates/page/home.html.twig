@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'It is happening'} %}
+        <p class="font-bold leading-6 text-left text-black my-4">
+            Organized by <strong>Yireo</strong> (the few people behind <strong>MageTestFest</strong> and <strong>Reacticon</strong>),
+            carried by the Dutch Magento community, co-hosted by <strong>Mage-OS Nederland</strong>, inspired by
+            <strong>FireGento</strong>, hosted in Utrecht, attended by Magento
+            enthousiasts (including you, yes you!).
+        </p>
+        <p>This event is held with English as main language. We also speak geek.</p>
+        {% include 'components/cta_button.html.twig' with {
+            href: 'https://training.yireo.com/events/mageunconference-nl-2026',
+            text: 'Get your ticket now'
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header2.html.twig' with {content: 'The concept'} %}
+        <div class="md:p-5 leading-6 text-center text-white grid md:grid-cols-2 gap-4 md:gap-24">
+            <div>
+                <div class="fill-white w-1/2 md:w-1/3 m-auto md:mb-8">
+                    {{ inline_svg('images/icon/boba-fett.svg') }}
+                </div>
+                {% include 'text/header3.html.twig' with {content: 'This is the unconference'} %}
+                <p class="my-4">
+                    This is an unconference: There is no program, there are no official speakers, there is just a
+                    group of like-minded people, chatting about all kinds of topics.
+                </p>
+                <p class="my-4">
+                    Via simple principles, the unconference guarantees an inspirational vibe: 1. Whoever shows up
+                    are the right people. 2. Whatever happens is fine. 3. Whenever it starts is the right time. 4.
+                    It is over when it is over.
+                </p>
+                <p class="my-4">
+                    Be prepared for plenty of fun and sharing.
+                </p>
+            </div>
+            <div>
+                <div class="fill-white w-1/2 md:w-1/3 m-auto md:mb-8">
+                    {{ inline_svg('images/icon/darth-vader.svg') }}
+                </div>
+                {% include 'text/header3.html.twig' with {content: 'Extreme unconferencing'} %}
+                <p class="my-4">We also would like to introduce everyone to the new concept of <strong>extreme
+                        unconferencing</strong> (which we just made up):</p>
+                <p class="my-4">If you are an experienced speaker, make place for others. If you are not experienced with
+                    speaking, let&apos;s get you a speaker slot to try things out. If you had a topic in mind to
+                    talk about, forget about that topic and talk about something else. If you came to the conference
+                    to learn about a specific topic, focus upon the other topics instead.
+                </p>
+                <p class="my-4">And there&apos;s going to be Chaos Agents to guarantee the flexibility.</p>
+            </div>
+        </div>
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header3.html.twig' with {content: 'What does "Mage" stand for?'} %}
+        <p class="my-4">And this is a MageUnconference. Which could stand for a Magento Unconference. But why not call it a
+            MagentoUnconference then? Well, little Frodo, times have changed. The name &quot;Magento&quot; has
+            always been a trademark of one company (Varien, Magento Inc and now Adobe) and because of copyright
+            laws, the owner of that trademark needs to grant permission for the usage of the name &quot;Magento&quot;
+            with an event like this.</p>
+        <p class="my-4">It is exactly because of reasons like this, that other initiatives spurred up
+            without the name Magento in it: Firegento, MageOne, Mage-OS. And MageUnconference. You could say
+            therefore that Mage stands for Magento. But the times have changed: <a href="https://mage-os.org/">Mage-OS</a>
+            is quickly gaining ground as a community effort to support the original product of Magento Open Source
+            (as opposed to Adobe Commerce). And in a way, Mage could stand for Mage-OS as well. Complex topic.
+            Leaving it as it is.
+        </p>
+        {% include 'components/cta_button.html.twig' with {
+            href: 'https://training.yireo.com/events/mageunconference-nl-2026',
+            text: 'Stop scrolling and buy a ticket'
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

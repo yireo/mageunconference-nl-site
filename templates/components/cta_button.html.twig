@@ -1,0 +1,12 @@
+{% set style = style|default('red') %}
+{% if style == 'red' %}
+{% set cssClass = 'text-black bg-red-700 hover:bg-red-800' %}
+{% endif %}
+{% if style == 'white' %}
+    {% set cssClass = 'text-white border-white border-2' %}
+{% endif %}
+
+<div class="inline-block p-2 md:p-5 mx-1 mt-8 leading-6 text-center {{ cssClass }}
+">
+    <a class="text-lg leading-6 text-center text-white cursor-pointer" href="{{ href }}">{{ text }}</a>
+</div>

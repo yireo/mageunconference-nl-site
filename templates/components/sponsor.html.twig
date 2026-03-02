@@ -1,0 +1,11 @@
+<div{% if style is defined %} style="{{ style }}"{% endif %}>
+    <a href="{{ url }}">
+        <div style="position: relative;">
+            {% if svg %}
+                <img src="{{ asset('images/logos/' ~ image) }}" alt="{{ label }}" style="width: 100%;">
+            {% else %}
+                <img src="{{ asset('images/logos/' ~ image) }}" alt="{{ label }}" style="width: 100%; height: auto;">
+            {% endif %}
+        </div>
+    </a>
+</div>

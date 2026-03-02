@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'What is an unconference'} %}
+        {{ markdown('program/about') }}
+        {% include 'components/cta_button.html.twig' with {
+            href: path('app_schedule_wall'),
+            text: 'Schedule Wall'
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'The Program'} %}
+        {% include 'text/header2.html.twig' with {tag: 'h3', content: 'June 24th to 27th 2026'} %}
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
+    {% set content %}
+        <div style="padding-bottom: 40px;">
+            {% include 'components/cta_button.html.twig' with {
+                href: path('app_schedule_wall'),
+                text: 'Schedule Wall'
+            } %}
+        </div>
+
+        <table class="striped" width="100%">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Program</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="font-bold">Wednesday, June 25th 2025</td>
+                <td>10:00</td>
+                <td>
+                    Team arrival on venue
+                </td>
+            </tr>
+                <tr>
+                    <td></td>
+                    <td>12:00 - 15:00</td>
+                    <td>
+                        Arrival of caravans &amp; trailer tents on camping site
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>19:00 - 23:00</td>
+                    <td>
+                        Welcoming drinks <small>(for those staying at the venue)</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Thursday, June 26th 2025</td>
+                    <td>07:00 - 09:00</td>
+                    <td>Breakfast</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>09:00 - 10:30</td>
+                    <td><strong>Unconference day 1: Opening & voting</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>10:30 - 13:00</td>
+                    <td><strong>Unconference day 1: Sessions</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>13:00 - 14:00</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>14:00 - 17:30</td>
+                    <td><strong>Unconference day 1: Sessions</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>18:30 - 21:30</td>
+                    <td><strong>Diner & drinks</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>21:30 - 23:00</td>
+                    <td><strong>After-party</strong></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Friday, June 27th 2025</td>
+                    <td>07:00 - 09:00</td>
+                    <td>Breakfast</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>09:00 - 10:30</td>
+                    <td><strong>Unconference day 2: Opening & voting</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>10:30 - 13:00</td>
+                    <td><strong>Unconference day 2: Sessions</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>13:00 - 14:00</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>14:00 - 17:30</td>
+                    <td><strong>Unconference day 2: Sessions</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>11:30 - 17:30</td>
+                    <td><a href="{{ path('app_agency_owners') }}">Round Table of Agency Owners</a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>18:30 - 21:30</td>
+                    <td><strong>Dinner</strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>21:30 - 23:00</td>
+                    <td><strong>After-party</strong></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Saturday, June 28th 2025</td>
+                    <td>07:00 - 12:00</td>
+                    <td>Breakfast and bye <small>(for those staying at the venue)</small></td>
+                </tr>
+            </tbody>
+        </table>
+
+        {% include 'components/cta_button.html.twig' with {
+            href: path('app_schedule_wall'),
+            text: 'Schedule Wall'
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h3', content: 'I have spoken'} %}
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {tag: 'h2', content: 'The voting process'} %}
+        <p>
+            During this unconference, the topics are determined by the attendees.
+            To make this possible, in the morning, topics can be written down on <strong>Topic Forms</strong> that are then posted on a <strong>Scheduling Wall</strong>. Once this is done, votes can be made by everyone on all topics. The most popular topics are then scheduled by the team into time slots and rooms. This is the way.
+        </p>
+        <p>
+            And you all get a MageUnconference t-shirt with the text &quot;I have spoken&quot;.
+        </p>
+        {% include 'components/cta_button.html.twig' with {
+            href: path('app_schedule_wall'),
+            text: 'Schedule Wall'
+        } %}
+        {% include 'components/cta_button.html.twig' with {
+            href: 'https://github.com/yireo/mageunconference-nl-2023-notes',
+            text: 'Session notes of 2023'
+        } %}
+        {% include 'components/cta_button.html.twig' with {
+            href: 'https://photos.app.goo.gl/u9A4rw4u6wWg8zyf8',
+            text: 'Photos of 2023'
+        } %}
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

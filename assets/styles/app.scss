@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose {
+    max-width: 100%;
+}
+
+$brand-color: #2563eb;
+.button {
+    background: $brand-color;
+}
+
+.logo {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+table.striped {
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid #ddd;
+
+        &:nth-child(even) {
+            background: #f6f6f6;
+        }
+
+        th,td {
+            padding: 5px;
+        }
+    }
+}
+
+
+ul.striped {
+    display: table;
+    border-collapse: collapse;
+
+    li {
+        display: table-row;
+
+        span {
+            display: table-cell;
+            border-bottom: 1px solid #ddd;
+        }
+
+        &:nth-child(even) {
+            background: #f6f6f6;
+        }
+    }
+}

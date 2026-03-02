@@ -1,0 +1,154 @@
+{%
+set menuItems = [
+    {
+        label: 'Home',
+        url: path('app_home')
+    },
+    {
+        label: 'Program',
+        url: path('app_program')
+    },
+    {
+        label: 'Tickets',
+        url: 'https://training.yireo.com/events/mageunconference-nl-2026'
+    },
+    {
+        label: 'Venue',
+        url: path('app_venue')
+    },
+    {
+        label: 'Sponsors',
+        url: path('app_sponsors')
+    },
+    {
+        label: 'Code of Conduct',
+        url: path('app_code_of_conduct')
+    },
+]
+%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MageUnconference 2026 Netherlands</title>
+    <meta name="description" content="Magento unconference 24-27 June 2026 in Utrecht">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="MageUnconference 2026 Netherlands">
+    <meta property="og:description" content="Magento Unconference 24-27 June 2026 held in Utrecht by developers for developers">
+    <meta property="og:url" content="https://mageunconference.nl/">
+    <meta property="og:image" content="https://mageunconference.nl/logos/mageuc-logo-social.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@MageUnConfNL">
+    <meta name="twitter:creator" content="@MageUnConfNL">
+    <meta name="twitter:title" content="MageUnconference 2026 Netherlands">
+    <meta name="twitter:description" content="Magento Unconference 24-27 June 2026 held in Utrecht by developers for developers">
+    <meta name="twitter:image" content="https://mageunconference.nl/logos/mageuc-logo-social.jpg">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('images/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('images/safari-pinned-tab.svg') }}" color="#5bbad5">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/fonts.css') }}">
+    {% endblock %}
+</head>
+<body>
+    <div class="flex fixed justify-between p-2 w-full leading-6 text-white bg-red-700 z-1">
+        <div class="hidden md:block leading-6 text-white">
+            MageUnconference NL, 25-26 June 2026, Utrecht, The Netherlands
+        </div>
+
+        <div class="md:hidden">MageUnconf NL - 25-26 June 2026</div>
+
+        <div class="hidden md:block">
+            <ul class="p-0 m-0 text-left bg-none">
+                {% for menuItem in menuItems %}
+                    <li class="inline mx-auto">
+                        <a class="inline-block pl-5 w-auto cursor-pointer" href="{{ menuItem.url }}">
+                            {{ menuItem.label }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1 mt-2" aria-label="Show menu">
+            <span class="block w-6 h-0.5 bg-white"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+
+        <nav id="mobile-menu" class="hidden fixed top-[30px] left-0 right-0 bg-red-700 p-4">
+            <ul>
+                {% for menuItem in menuItems %}
+                    <li class="border-b-1 border-red-400">
+                        <a class="inline-block py-3 w-auto cursor-pointer" href="{{ menuItem.url }}">
+                            {{ menuItem.label }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <div class="py-20 px-8 w-full leading-6 text-black bg-black text-white">
+            <div class="relative py-0 md:py-20 px-0 md:px-8 m-auto text-center">
+                <img
+                    alt="MageUnconference Logo"
+                    fetchpriority="high"
+                    width="800"
+                    height="254"
+                    decoding="async"
+                    data-nimg="1"
+                    src="{{ asset('images/logos/mageuc-logo.webp') }}"
+                    style="color: transparent; z-index:0"
+                    class="text-transparent inline"
+                />
+
+                <div class="mt-4 md:mt-32 text-gray-200">
+                {% include 'text/header1.html.twig' with {content: pageTitle} %}
+                </div>
+            </div>
+        </div>
+
+        <main role="main">
+            {% block body %}{% endblock %}
+        </main>
+
+        <div class="py-4 md:py-20 px-2 md:px-8 w-full leading-6 text-black bg-black">
+            <div class="leading-6 text-center text-white">
+                <div class="">
+                    <img src="{{ asset('images/logos/mageuc-helmet.jpg') }}" alt="MageUnconference Helmet" class="inline">
+                </div>
+                <h3 class="logo text-4xl uppercase text-white my-8">MageUnconf NL 2026</h3>
+
+                <div class="fill-white text-xl my-4 logo uppercase">
+                    is cooked up by <a href="https://www.yireo.com/">Yireo</a>
+                </div>
+                <div class="my-4">
+                    <img src="{{ asset('images/logos/yireo-white.png') }}" alt="Yireo" class="inline w-32">
+                </div>
+            </div>
+        </div>
+
+        {% include 'components/team.html.twig' %}
+
+        <div class="py-20 px-8 leading-6 text-center text-white bg-red-700">
+            <span>Organized by Yireo (<a href="mailto:info@yireo.com">info@yireo.com</a>)</span> -
+            <span>For updates use <a href="https://www.yireo.com/newsletter">yireo.com/newsletter</a></span>
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('js/app.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Visiting Utrecht and Amsterdam'} %}
+        <p>
+            If you are coming from abroad and have never been in The Netherlands, there will be plenty to see in Utrecht. And if you have more time, Amsterdam is around the corner too.
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+
+{% include 'components/banner_image.html.twig' with {
+    image: 'mando-cycling-site.png',
+    label: 'Cycle like a Mandolorian does'
+} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Visiting Utrecht'} %}
+        <p>
+            If you are coming from abroad and have never been in The Netherlands, there will be plenty to see in Utrecht, even though it is much smaller than Amsterdam: The <strong>Oude Gracht</strong> (ie: Old Canal) is the place to be with plenty of restaurants and things to see. The <strong>Domtoren</strong> (Dom Tower) is the icon of Utrecht and worth a climb.
+        </p>
+        <h3>Sight-seeing</h3>
+        <ul>
+            <li><strong>Spoorwegmuseum</strong> (Railway Museum): If you dig trains.</li>
+            <li><strong>Utrecht University Botanic Gardens</strong>: Diverse collection of plants.</li>
+            <li><strong>Wilhelminapark</strong>: Popular city park.</li>
+            <li><strong>Museum Speelklok</strong>: Dedicated to self-playing musical instruments</li>
+            <li><strong>Sonnenborgh Observatory & Museum</strong>: Learn more about astronomy and meteorology (in a galaxy far far away)</li>
+            <li><strong>Pandhof Domkerk</strong>: Find a quiet spot in the Dom church&apos;s Courtyard Garden or head over to the nearby <strong>Flora&apos;s Hof</strong>. Likewise the almshouse courtyard <strong>Bruntenhof</strong> is worth a visit as well.</li>
+        </ul>
+        <h3>Shopping</h3>
+        <p>Lots of shops are in <strong>Hoog Catharijne</strong> in between the old center and the trainstation. Do you check out the <strong>Vredenburg Market</strong> as well. Other good options are <strong>Twijnstraat</strong>, <strong>Voorstraat</strong> and <strong>Biltstraat</strong>.</p>
+        <h3>Food and drinks</h3>
+        <ul>
+            <li>There are plenty of restaurants at the <strong>Oude Gracht</strong></li>
+            <li><strong>Broodje Mario</strong>: Takeaway counter for an Italian-style sandwich, close to the Dom Tower.</li>
+            <li><strong>Cafe Belgie</strong>: Our local hangout with plenty of Belgium beer.</li>
+            <li><strong>Olivier</strong>: Cafe based in a former church</li>
+        </ul>
+        <h3>Getting around</h3>
+        <p>You can walk around the city center by foot easily. Note that the venue is a bit further (4-5 kilometer).</p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+
+{% include 'components/banner_image.html.twig' with {
+    image: 'mando-smoking-site.png',
+    label: 'Smoking hot'
+} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Visiting Amsterdam'} %}
+        <h3>Sight-seeing</h3>
+        <p>While Utrecht is worth the visit, if you have never been to Amsterdam in your life, you are missing out. This is the way. Do make sure to check out the following (and note that some places require reservation beforehand):</p>
+        <ul>
+            <li>The usual things to do are to visit the <strong>Rijksmuseum</strong>, <strong>Anne Frank House</strong>, <strong>Van Gogh Museum</strong> and make a canal cruise. Grab a random flyer from a random hotel and you&apos;ll get it.</li>
+            <li><strong>Museum Ons&apos; Lieve Heer op Solder</strong> (Our Lord in the Attic): A hidden gem—a secret Catholic church built in the attic of a 17th-century canal house during a time when Catholicism was outlawed.</li>
+            <li><strong>De Poezenboot</strong> (cat boat): Not for visiting but nice to walk by. They have cats.</li>
+            <li><strong>Woonbootmuseum</strong> (Houseboat Museum): Get a unique insight into life on Amsterdam&apos;s canals by exploring the inside of a traditional, fully furnished houseboat.</li>
+            <li><strong>STRAAT Museum</strong>: A massive warehouse in the NDSM Wharf showcasing an impressive collection of international street art and graffiti. A must-see for lovers of urban art.</li>
+            <li><strong>EYE Filmmuseum</strong>: An architectural marvel on the IJ river, dedicated to the art and history of cinema, with regular exhibitions, screenings, and a fantastic restaurant with a view.</li>
+        </ul>
+        <h3>Hanging out and shopping</h3>
+        <p>If you want to relax, the famous park <strong>Vondelpark</strong> is legendary for hanging out. And if you are looking for a more sophisticated option, do visit the <strong>Hortus Botanicus</strong>. Or the <strong>Begijnhof</strong>, a tranquil medieval courtyard. Further away, the <strong>Amsterdamse Bos</strong> is quite large and is perfect to stay an entire day.</p>
+        <p>For shopping options, head over to the <strong>Negen Straatjes</strong> (translated: Nine Streets). The <strong>Kalverstraat</strong> and <strong>Leidsestraat</strong> are very popular shopping streets as well. Or head for the neary <strong>Haarlemmerdijk</strong>. For a market experience, head to the <strong>Albert Cuyp Market</strong> (anything goes), the <strong>Waterlooplein</strong> flea market or the <strong>Bloemenmarkt</strong> (flowers).</p>
+        <h3>Food options</h3>
+        <ul>
+            <li><strong>Foodhallen</strong>: A trendy indoor food hall.</li>
+            <li><strong>Winkel 43</strong>: Taste the legendary Dutch apple pie with a generous dollop of cream.</li>
+            <li><strong>De Kas</strong> (Kamerlingh Onneslaan 3): restaurant in a greenhouse. Reservations are required.</li>
+            <li>In for a quick snack? Head over to one of the <strong>FEBO</strong> snack-vending machines for a kroket or frikandel. How Dutch can you go?</li>
+        </ul>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

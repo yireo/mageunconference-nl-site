@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'Code of conduct'} %}
+        {% include 'text/header3.html.twig' with {content: 'Purpose'} %}
+        <p class="my-4">
+            We believe any community - including the Magento community - should be truly open for everyone. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, disability, ethnicity, religion, preferred operating system, programming language, or text editor.</p>
+        <p class="my-4">
+            This code of conduct outlines our expectations for participant behavior as well as the consequences for unacceptable behavior.
+        </p>
+        <p class="my-4">
+            We invite all sponsors, volunteers, speakers, attendees, and other participants to help us realize a safe and positive conference experience for everyone.
+        </p>
+        <h3 class="logo text-xl my-4">EXPECTED BEHAVIOR</h3>
+        <p class="my-4">
+            Be considerate, respectful, and collaborative. Refrain from demeaning, discriminatory or harassing behavior and speech. Be mindful of your surroundings and of your fellow participants. Alert conference organizers if you notice a dangerous situation or someone in distress. Participate in an authentic and active way. In doing so, you help to make MageUnconference NL a great event for everyone, including yourself.
+        </p>
+        <h3 class="logo text-xl my-4">UNACCEPTABLE BEHAVIOR</h3>
+        <p class="my-4">
+            Unacceptable behaviors include: intimidating, harassing, abusive, discriminatory, derogatory or demeaning conduct by any attendees of MageUnconference NL and related events (workshops, hackathon, after-party, other meetups during the event). All rooms and facilities used by MageUnconference NL may be shared with members of the public; please be respectful to all patrons of these locations.
+        </p>
+        <p class="my-4">
+            Harassment includes: offensive verbal comments related to gender, sexual orientation, race, religion, disability; inappropriate use of nudity and/or sexual images in public spaces (including presentation slides); deliberate intimidation, stalking or following; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact, and unwelcome sexual attention.
+        </p>
+        <h3 class="logo text-xl my-4">CONSEQUENCES OF UNACCEPTABLE BEHAVIOR</h3>
+        <p class="my-4">
+            Unacceptable behavior will not be tolerated whether by other attendees, freedom fighters, other Mandolorians, organizers, venue staff, sponsors, or anyone involved with the MageUnconference NL event. Anyone asked to stop unacceptable behavior is expected to comply immediately.
+        </p>
+        <p class="my-4">
+            If a participant engages in unacceptable behavior, the conference organizers may take any action they deem appropriate, up to and including expulsion from the conference without warning or refund.
+        </p>
+        <h3 class="logo text-xl my-4">WHAT TO DO IF YOU WITNESS OR ARE SUBJECT TO UNACCEPTABLE BEHAVIOR</h3>
+        <p class="my-4">
+            If you are subject to unacceptable behavior, notice that someone else is being subject to unacceptable behavior, or have any other concerns, please notify a conference organizer as soon as possible.
+        </p>
+        <p class="my-4">
+            The MageUnconference NL team will be available to help participants contact venue security or local law enforcement, to provide escorts, or to otherwise assist those experiencing unacceptable behavior to feel safe for the duration of the conference. Any volunteer at the event can connect you with a conference organizer. You can also come to the special registration desk in the lobby and ask for the organizers.
+        </p>
+        <h3 class="logo text-xl my-4">SCOPE</h3>
+        <p class="my-4">
+            We expect all conference participants (sponsors, volunteers, speakers, attendees, and other guests) to abide by this code of conduct at all conference venues and conference-related social events.
+        </p>
+        <h3 class="logo text-xl my-4">CONTACT INFORMATION</h3>
+        <p class="my-4">
+            You can contact Yireo through mail via info@yireo.com or tweets via @yireo. Alternatively, you can ask any speaker, volunteer or team member and they will be happy to bring you into contact with the organizer.
+        </p>
+        <h3 class="logo text-xl my-4">LICENSE AND ATTRIBUTION</h3>
+        <p class="my-4">
+            This Code of Conduct is a modified copy from the awesome work of Open Source Bridge, but with our event information substituted and some minor adjustments being made. The original is available at opensourcebridge.org/about/code-of-conduct/ and is released under a Creative Commons Attribution-ShareAlike license.
+        </p>
+    {% endset %}
+    {% include 'section/section-white.html.twig' with {content: content} %}
+{% endblock %}

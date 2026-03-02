@@ -1,0 +1,1 @@
+With a normal conference, the organizers set up a program with speaker slots and wait for the crowd to fill the rooms. With an unconference, we try to avoid this hierarchical way of setting up the event. Instead, the event is participant-driven: Topics are voted for. Everyone is encouraged to speak their mind and participate in sessions.
