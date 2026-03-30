@@ -1,0 +1,186 @@
+/* latin-ext */
+@font-face {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTXCb04q32xlpwtcZfrxE.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTXCb04q32xlpwu8Zf.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Mandalore";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore"), url("https://fonts.cdnfonts.com/s/32037/mandalore.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore 3D";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore 3D"), url("https://fonts.cdnfonts.com/s/32037/mandalore3d.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore 3D Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore 3D Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalore3dital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Condensed"), url("https://fonts.cdnfonts.com/s/32037/mandalorecond.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Condensed Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Condensed Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorecondital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Gradient";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Gradient"), url("https://fonts.cdnfonts.com/s/32037/mandaloregrad.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Gradient Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Gradient Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloregradital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Halftone";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Halftone"), url("https://fonts.cdnfonts.com/s/32037/mandalorehalf.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Halftone Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Halftone Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorehalfital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloreital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser"), url("https://fonts.cdnfonts.com/s/32037/mandalorelaser.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelaserital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Leftalic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Leftalic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelaserleft.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Rough";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Rough"), url("https://fonts.cdnfonts.com/s/32037/mandalorelaserrough.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Rough Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Rough Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelaserroughital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Semi-Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Semi-Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelasersemital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Super-Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Super-Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelasersuperital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Title";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Title"), url("https://fonts.cdnfonts.com/s/32037/mandalorelasertitle.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Laser Title Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Laser Title Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorelasertitleital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Leftalic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Leftalic"), url("https://fonts.cdnfonts.com/s/32037/mandaloreleft.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Rough";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Rough"), url("https://fonts.cdnfonts.com/s/32037/mandalorerough.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Rough Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Rough Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloreroughital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Semi-Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Semi-Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloresemital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Super-Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Super-Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloresuperital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Title";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Title"), url("https://fonts.cdnfonts.com/s/32037/mandaloretitle.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Title Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Title Italic"), url("https://fonts.cdnfonts.com/s/32037/mandaloretitleital.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Expanded";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Expanded"), url("https://fonts.cdnfonts.com/s/32037/mandalorexpand.woff") format("woff");
+}
+@font-face {
+  font-family: "Mandalore Expanded Italic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Mandalore Expanded Italic"), url("https://fonts.cdnfonts.com/s/32037/mandalorexpandital.woff") format("woff");
+}
