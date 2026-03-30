@@ -21,11 +21,30 @@
     {% endset %}
     {% include 'section/section-red.html.twig' with {content: content} %}
 
+    {% set sponsors = [
+        {
+            url: 'https://loki-extensions.com/',
+            logo: 'loki-checkout.png',
+            title: 'Loki Checkout'
+        },
+        {
+            url: 'https://www.hypernode.com/',
+            logo: 'hypernode.svg',
+            title: 'Hypernode'
+        }
+    ] %}
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Our main sponsors 2026'} %}
-        <p>
-            Our first sponsors are in the process of signing up. But we need more sponsors to survive.
-        </p>
+        <div class="grid md:grid-cols-2 gap-4 my-4 md:my-16">
+            {% for sponsor in sponsors %}
+                <div class="flex justify-center items-center">
+                    <a href="{{ sponsor.url }}">
+                        <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}"
+                             class="{{ sponsor.css|default('') }} w-100 object-contain">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
         <div>
             {% include 'components/cta_button.html.twig' with { href: '/become-sponsor', text: 'Help us out by promoting your brand'} %}
         </div>
