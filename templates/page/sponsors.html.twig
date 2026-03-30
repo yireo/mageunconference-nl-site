@@ -41,24 +41,31 @@
         {
             url: 'https://nl.mage-os.org',
             logo: 'mage-os-nl-square.png',
-            title: 'Mage-OS Nederland'
+            title: 'Mage-OS Nederland',
+            css: 'max-h-[160px]'
         },
-                {
+        {
             url: 'https://www.magmodules.eu/',
             logo: 'magmodules.png',
             title: 'MagModules',
-        }
+            css: 'max-h-[160px]'
+
+        },
+        {
+            url: 'https://www.madebymouses.com/',
+            logo: 'made-by-mouses.svg',
+            title: 'Made By Mouses'
+        },
     ] %}
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Support Sponsors'} %}
         {% include 'text/header3.html.twig' with {content: 'For we drink our beers on you'} %}
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-4 my-4 md:my-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 md:my-16">
             {% for sponsor in sponsors %}
-                <div>
+                <div class="flex justify-center items-center">
                     <a href="{{ sponsor.url }}">
-                        <div style="position: relative;">
-                            <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}" class="inline">
-                        </div>
+                        <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}"
+                             class="{{ sponsor.css|default('') }} w-100 object-contain">
                     </a>
                 </div>
             {% endfor %}
