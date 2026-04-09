@@ -4,11 +4,11 @@
     {% set content %}
         {% include 'text/header3.html.twig' with {content: 'Becoming a sponsor'} %}
         <div class="prose">
-        <p class="intro">This is not the first MageUnconference. Besides a German variant that has been ran successfully already for many years in Cologne, there were also a couple of Dutch MageUnconferences organized by the now obsolete Dutchento (in 2017 and 2018 if we remember correctly). Yet, COVID happened, community members left and it remained quiet. We (of <a href="https://www.yireo.com/">Yireo</a>) were therefore superduper proud to organize the unconference in 2023. And in 2025, we are back again.</p>
+        <p class="intro">This is not the first MageUnconference. Besides a German variant that has been ran successfully already for many years in Cologne, there were also a couple of Dutch MageUnconferences organized by the now obsolete Dutchento (in 2017 and 2018 if we remember correctly). Yet, COVID happened, community members left and it remained quiet for a few years. We (of <a href="https://www.yireo.com/">Yireo</a>) were therefore superduper proud to organize the unconference in 2023. And in 2025, we are back again.</p>
         <h3>The road so far</h3>
         <p>Over the years, Yireo has organized many conferences: In 2016, twice a Dutch Magento 2 Seminar in Utrecht to celebrate the coming of Magento 2. In 2017, a developer-and-testing-focused <a href="https://magetestfest.com/">MageTestFest</a> in Amersfoort. In 2018, twice a <a href="https://reacticon.org/">Reacticon</a> conference in Eindhoven. In 2019, a second MageTestFest in Italy. In the lockdown years 2020 and 2021, twice again a Reacticon online and then a MageUnconference NL in 2023. Each event type had its own distinct feeling. Likewise, this MageUnconference has its own flavor. And that&apos;s a perfect reason already for you to become part of this.</p>
         <h3>The people</h3>
-        <p>In the past, unconferences (and other Dutch developer-events) attracted a crowd of between 100 and 200 people and we are aiming for the same. The MageUnconference NL 2023 had in total 170 attendees. Mostly developers, but also agency owners and some merchants. Attendees came from different countries. The majority was formed by people from The Netherlands and Germany, but there were some others from across Europe and abroad as well - even from the most desert places of the outer rim.</p>
+        <p>In the past, unconferences (and other Dutch developer-events) attracted a crowd of between 100 and 200 people and we are aiming for the same. The MageUnconference NL 2023 had in total 170 attendees. The MageUnconference NL 2025 had in total 185 attendees. Mostly developers, but also agency owners and some merchants. Attendees came from different countries. The majority was formed by people from The Netherlands and Germany, but there were some others from across Europe and abroad as well - even from the most desert places of the outer rim.</p>
         </div>
     {% endset %}
     {% include 'section/section-white.html.twig' with {content: content} %}
@@ -20,17 +20,18 @@
 
     {% set content %}
         {% include 'text/header2.html.twig' with {content: 'The options to sponsor'} %}
-        <p class="my-4">We intend to keep the MageUnconference fairly simple and to the point. Because of this, the sponsor packages are also simple: You can purchase either a <strong>Support Sponsorship</strong> or a <strong>Main Sponsorship</strong>. The <strong>Headline Sponsorship</strong> has been taken already.</p>
+        <p class="my-4">We intend to keep the MageUnconference fairly simple and to the point. Because of this, the sponsor packages are also simple: You can purchase either a <strong>Support Sponsorship</strong> or a <strong>Main Sponsorship</strong>.</p>
         <ul class="my-4 list-disc">
             <li class="ml-4 my-4">The <strong>Support Sponsorship</strong> (Euro 500,-) includes a logo on this MageUnconference site, for as long as possible (until the next unconference). And your name will be mentioned via social media.</li>
             <li class="ml-4 my-4">The <strong>Main Sponsorship</strong> (Euro 2.000,-) includes the same benefits as the Support Sponsorship, but also gives you the right to place a maximum of 1 rollup banner in the main hall. And you can spread your goodies around. [max: 8]</li>
-            <li class="ml-4 my-4">The <strong>Headline Sponsorship</strong> (Euro 4.000,-) includes the same benefits as the Main Sponsorship, but with 3 banners (or more), additional exposure and gimmicks. [max: 1, reserved)</li>
+            <li class="ml-4 my-4">The <strong>Headline Sponsorship</strong> (Euro 4.000,-) includes the same benefits as the Main Sponsorship, but with 3 banners (or more), an additional space of 6 by 6 m2 in room A and various gimmicks. [max: 1)</li>
             <li class="ml-4 my-4">Additional sponsorships (like sponsoring diner and/or party) can be discussed as well.</li>
         </ul>
         <p class="my-4">Note that neither sponsorship includes attendance during the event. You can purchase attendee tickets for the right number of team members separately.</p>
-        <h3 class="my-4">Where goes the Main Sponsorship during the event</h3>
-        <p class="my-4">The event takes place at Fort aan de Klop (see also <a href="{{ path('app_venue') }}">Venue</a>). The main room of Loods A will be the place where you can easily place your rollup banner. That&apos;s also where goodies can be spread. We&apos;ll try to squeeze in your banners in a few more places though, except for the bathroom.</p>
-        <h3 class="my-4">How to proceed</h3>
+
+        {% include 'text/header3.html.twig' with {content: 'Where goes the Main Sponsorship during the event'} %}
+        <p class="my-4">The event takes place at Fort aan de Klop (see also <a href="{{ path('app_venue') }}">Venue</a>). The main room of Loods A will be the place where you can easily place your rollup banner. That&apos;s also where goodies can be spread. We&apos;ll try to squeeze in your banners in a few more places though, except for the bathroom. Places for breakout sessions fit best.</p>
+        {% include 'text/header3.html.twig' with {content: 'How to proceed'} %}
         <p class="my-4">If you want to join as a sponsor, you can simply place an order for the right sponsoring package at the ticketing shop, along side with any attendance tickets. Once we see a sponsoring order coming in, we&apos;ll get in touch to get our hands upon your logo and the logo will go live as soon as possible. Other remaining tasks for main sponsorships will be dealt with in the weeks before the unconference itself.</p>
         {% include 'components/cta_button.html.twig' with {
             href: 'https://training.yireo.com/events/mageunconference-nl-2025',
