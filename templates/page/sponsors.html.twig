@@ -31,13 +31,19 @@
             url: 'https://www.hypernode.com/',
             logo: 'hypernode.svg',
             title: 'Hypernode'
+        },
+        {
+            url: 'https://www.amasty.com/',
+            logo: 'amasty.svg',
+            title: 'Amasty',
+            css: 'p-12 bg-sky-500/20'
         }
     ] %}
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Our main sponsors 2026'} %}
-        <div class="grid md:grid-cols-2 gap-4 my-4 md:my-16">
+        <div class="grid md:grid-cols-2 gap-8 my-4 md:my-16">
             {% for sponsor in sponsors %}
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-center {{ sponsor.css|default() }}">
                     <a href="{{ sponsor.url }}">
                         <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}"
                              class="{{ sponsor.css|default('') }} w-100 object-contain">

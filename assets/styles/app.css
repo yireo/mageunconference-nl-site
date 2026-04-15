@@ -1279,8 +1279,22 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-blue-200 {
+    background-color: var(--color-blue-200);
+  }
   .bg-red-700 {
     background-color: var(--color-red-700);
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
+  }
+  .bg-sky-500\/20 {
+    background-color: color-mix(in srgb, oklch(68.5% 0.169 237.323deg) 20%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-sky-500\/20 {
+      background-color: color-mix(in oklab, var(--color-sky-500) 20%, transparent);
+    }
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1305,6 +1319,12 @@
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
   }
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
