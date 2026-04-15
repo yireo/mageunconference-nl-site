@@ -8,3 +8,21 @@
 - Commit and push back the changes
 - Create a Pull Request
 
+### Development
+
+```bash
+git pull
+composer install
+```
+
+To start a webserver:
+````bash
+symfony serve
+````
+
+To rebuild Tailwind:
+```bash
+npm install
+npm run build
+npm run watch
+```
