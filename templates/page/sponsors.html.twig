@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {#
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Headline Sponsor 2026'} %}
         <p>
@@ -8,18 +9,7 @@
         </p>
     {% endset %}
     {% include 'section/section-white.html.twig' with {align: 'center', content: content} %}
-
-    {% set content %}
-        {% include 'text/header1.html.twig' with {content: 'This event requires funding'} %}
-        <p>
-            This community event is not a fancy show, but still requires funding.
-            Want to chip in? We would be grateful if you could sponsor.
-        </p>
-        <div>
-            {% include 'components/cta_button.html.twig' with { style: 'white', href: '/become-sponsor', text: 'Become a sponsor yourself'} %}
-        </div>
-    {% endset %}
-    {% include 'section/section-red.html.twig' with {content: content} %}
+    #}
 
     {% set sponsors = [
         {
@@ -51,16 +41,19 @@
                 </div>
             {% endfor %}
         </div>
-        <div>
-            {% include 'components/cta_button.html.twig' with { href: '/become-sponsor', text: 'Help us out by promoting your brand'} %}
-        </div>
+
     {% endset %}
     {% include 'section/section-white.html.twig' with {align: 'center', content: content} %}
 
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'I have sponsored'} %}
+
+        <div>
+            {% include 'components/cta_button.html.twig' with { style: 'white', href: '/become-sponsor', text: 'Help us out by promoting your brand'} %}
+        </div>
     {% endset %}
     {% include 'section/section-red.html.twig' with {content: content} %}
+
 
     {% set sponsors = [
         {
@@ -97,5 +90,18 @@
         </div>
     {% endset %}
     {% include 'section/section-white.html.twig' with {content: content} %}
+
+    {% set content %}
+        {% include 'text/header1.html.twig' with {content: 'This event requires funding'} %}
+        <p>
+            This community event is not a fancy show, but still requires funding.
+            Want to chip in? We would be grateful if you could sponsor.
+        </p>
+        <div>
+            {% include 'components/cta_button.html.twig' with { style: 'white', href: '/become-sponsor', text: 'Become a sponsor yourself'} %}
+        </div>
+    {% endset %}
+    {% include 'section/section-red.html.twig' with {content: content} %}
+
 
 {% endblock %}
