@@ -67,7 +67,6 @@
             logo: 'magmodules.png',
             title: 'MagModules',
             css: 'max-h-[160px]'
-
         },
         {
             url: 'https://www.madebymouses.com/',
@@ -79,11 +78,16 @@
             logo: 'vendic.svg',
             title: 'Vendic'
         },
+        {
+            url: 'https://aheadworks.com/',
+            logo: 'aheadworks.png',
+            title: 'Aheadworks'
+        },
     ] %}
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Support Sponsors'} %}
         {% include 'text/header3.html.twig' with {content: 'For we drink our beers on you'} %}
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 md:my-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-4 md:my-16">
             {% for sponsor in sponsors %}
                 <div class="flex justify-center items-center">
                     <a href="{{ sponsor.url }}">
