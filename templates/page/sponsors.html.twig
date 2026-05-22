@@ -27,6 +27,12 @@
             logo: 'amasty.svg',
             title: 'Amasty',
             css: 'px-8'
+        },
+        {
+            url: 'https://www.mollie.com/',
+            logo: 'mollie.png',
+            title: 'Mollie',
+            css: 'px-8'
         }
     ] %}
     {% set content %}
@@ -83,6 +89,11 @@
             logo: 'aheadworks.svg',
             title: 'Aheadworks'
         },
+        {
+            url: 'https://linted.nl/',
+            logo: 'linted.png',
+            title: 'Linted'
+        },
     ] %}
     {% set content %}
         {% include 'text/header1.html.twig' with {content: 'Support Sponsors'} %}
@@ -91,8 +102,7 @@
             {% for sponsor in sponsors %}
                 <div class="flex justify-center items-center">
                     <a href="{{ sponsor.url }}">
-                        <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}"
-                             class="{{ sponsor.css|default('') }} w-100 object-contain">
+                        <img src="{{ asset('images/logos/' ~ sponsor.logo) }}" alt="{{ sponsor.title }}" class="{{ sponsor.css|default('') }} w-100 object-contain">
                     </a>
                 </div>
             {% endfor %}
