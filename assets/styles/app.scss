@@ -1,6 +1,10 @@
 @import "tailwindcss";
+
 @plugin "@tailwindcss/typography";
+
 @source "../../templates/**/*.twig";
+@source "../templates/**/*.twig";
+@source "./templates/**/*.twig";
 
 .prose {
     max-width: 100%;
