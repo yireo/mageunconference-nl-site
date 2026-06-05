@@ -1345,6 +1345,9 @@
   .px-24 {
     padding-inline: calc(var(--spacing) * 24);
   }
+  .px-32 {
+    padding-inline: calc(var(--spacing) * 32);
+  }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
   }
